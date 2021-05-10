@@ -1,0 +1,19 @@
+name: 'ghdag'
+description: 'GitHub Action for ghdag, a tiny workflow engine for GitHub issue and pull request.'
+inputs:
+  github-token:
+    description: 'GITHUB_TOKEN'
+    default: ${{ github.token }}
+  slack-api-token:
+    description: 'SLACK_API_TOKEN'
+  workflow-file:
+    description: 'Workflow file path'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.workflow-file }}
+  env:
+    GITHUB_TOKEN: ${{ inputs.github-token }}
+    SLACK_API_TOKEN: ${{ inputs.slack-api-token }}
