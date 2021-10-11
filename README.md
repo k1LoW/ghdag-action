@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Run ghdag
-        uses: k1LoW/ghdag@main
+        uses: k1LoW/ghdag-action@v0
         with:
           workflow-path: myworkflow.yml
 ```
