@@ -23,13 +23,13 @@ jobs:
         name: Run ghdag
         uses: k1LoW/ghdag-action@v0
         with:
-          workflow-path: myworkflow.yml
+          workflow-file: myworkflow.yml
 ```
 
 ### Inputs
 
 |  | Description |
 | --- | --- |
-| `workflow-path` | Workflow file path |
+| `workflow-file` | Workflow file |
 | `github-token` | `GITHUB_TOKEN` |
 | `slack-api-token` | `SLACK_API_TOKEN` |
